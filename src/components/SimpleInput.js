@@ -32,7 +32,6 @@ const SimpleInput = props => {
 		if (!enteredName || !enteredEmail) {
 			return;
 		}
-
 		resetNameInput();
 		resetEmailInput();
 	};
