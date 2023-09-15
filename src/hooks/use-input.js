@@ -7,26 +7,26 @@ const useInput = validateValue => {
 	const valueIsValid = validateValue(enteredValue);
 	const hasError = !valueIsValid && isTouched;
 
-    const valueChangeHandler = event => {
+	const valueChangeHandler = event => {
 		setEnteredValue(event.target.value);
 	};
 
-    const inputBlurHandler = event => {
+	const inputBlurHandler = event => {
 		setIsTouched(true);
 	};
 
-    const reset = () => {
-        setEnteredValue('');
-        setIsTouched(false);
-    }
+	const reset = () => {
+		setEnteredValue("");
+		setIsTouched(false);
+	};
 
 	return {
 		value: enteredValue,
-        isValid: valueIsValid,
+		isValid: valueIsValid,
 		hasError,
-        valueChangeHandler,
-        inputBlurHandler,
-        reset
+		valueChangeHandler,
+		inputBlurHandler,
+		reset,
 	};
 };
 
